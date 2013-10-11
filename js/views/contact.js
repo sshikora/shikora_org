@@ -1,22 +1,20 @@
-var contactView = contactView || {};
+define(['backbone'], function( Backbone ) {
 
-contactView = Backbone.View.extend({
+  var ContactView = Backbone.View.extend({
 
-  el: '#contact',
-  contactTemplate: Handlebars.compile($("#contact-template").html()),
-  events: {},
+    el: '#contact',
+    contactTemplate: Handlebars.compile($("#contact-template").html()),
+    events: {},
 
-  initialize: function() {
-    this.contact = $('#contact');
-    this.render();
+    initialize: function() {
+      this.contact = $('#contact');
+      this.render();
+    },
 
-  },
+    render: function() {
+      this.contact.html(this.contactTemplate({}));
+    }
+  })
 
-  render: function() {
-
-    this.contact.html(this.contactTemplate({}));
-
-  }
-
-  
-})
+  return ContactView;
+});
