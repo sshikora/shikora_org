@@ -1,10 +1,11 @@
 
 require.config({
-  baseUrl:"js",
+  baseUrl:"app",
   paths:{ 
-    'jquery': 'lib/jquery/jquery',
-    'underscore': 'lib/underscore/underscore',
-    'backbone': 'lib/backbone/backbone'
+    'jquery': 'js/lib/jquery/jquery',
+    'underscore': 'js/lib/underscore/underscore',
+    'backbone': 'js/lib/backbone/backbone',
+    'text': 'js/lib/require/text'
        },
   shim: {
     'underscore': {
@@ -19,7 +20,7 @@ require.config({
 
 require([
   "jquery",
-  "views/contact"
+  "js/views/contact"
   ],
 
   function($, ContactView){
