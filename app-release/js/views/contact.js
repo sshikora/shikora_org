@@ -1,0 +1,1 @@
+define(["backbone","text!templates/contact.html"],function(e,t){var n=e.View.extend({el:"#contact",contactTemplate:function(){},events:{},initialize:function(){this.contact=$("#contact");debugger;this.contactTemplate=Handlebars.compile(t),this.render()},render:function(){debugger;this.contact.html(this.contactTemplate({}))}});return n});
